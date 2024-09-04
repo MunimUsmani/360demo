@@ -29,7 +29,7 @@ const Scroll = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setPosition((prevPosition) => prevPosition + 1);
-    }, 40); // Adjust the speed here
+    }, 40);
 
     return () => clearInterval(intervalId);
   }, []);

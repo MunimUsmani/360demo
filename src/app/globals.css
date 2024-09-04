@@ -7,31 +7,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-@layer components {
-  .animate {
-    display: flex;
-    animation: scroll 20s linear infinite;
-  }
-  .animate:hover {
-    animation-play-state: paused;
-  }
-
-  .animate-reversed {
-    display: flex;
-    animation: scroll 20s linear infinite;
-    animation-direction: reverse;
-  }
-  .animate-reversed:hover {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translate(-50%);
-    }
-  }
-}
