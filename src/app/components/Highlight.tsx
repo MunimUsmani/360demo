@@ -4,7 +4,7 @@ import Image from "next/image";
 const Highlight = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white min-h-screen px-6 py-12 md:px-12 lg:px-24">
-      <div className="max-w-lg md:max-w-xl">
+      <div className="max-w-lg md:max-w-xl gap-10">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-300">
           <span className="text-red-600">Crafting</span> the
         </h1>
@@ -23,7 +23,7 @@ const Highlight = () => {
         </p>
       </div>
 
-      <div className="right-0 bottom-0 md:static md:w-1/2 transform md:transform-none md:-rotate-12 scale-125 mb-12 ml-55">
+      <div className="right-0 bottom-0 md:static md:w-1/2 transform md:transform-none md:-rotate-12 scale-125 mb-12 ml-55 -mr-24">
         <Image
           src="/X.png"
           alt="Graphic Element"

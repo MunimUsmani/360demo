@@ -7,7 +7,7 @@ import Wording from "./components/Wording";
 import Carousel from "@/app/components/Carousel";
 import Footer from "./components/Footer";
 import TechAndTools from "./components/TechAndTools";
-import "../styles/fonts.css";
+// import "../styles/fonts.css";
 
 export default function Home() {
   return (

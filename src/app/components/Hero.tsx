@@ -1,32 +1,92 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from "react";
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Hero = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Hero: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const canvasRef = useRef<HTMLDivElement | null>(null);
+  const modelRef = useRef<THREE.Group | null>(null);
 
   useEffect(() => {
-    const handleOutsideClick = (event: any) => {
-      if (
-        !event.target.closest(".navbar-menu") &&
-        !event.target.closest(".navbar-burger")
-      ) {
-        setIsMenuOpen(false);
+    gsap.registerPlugin(ScrollTrigger);
+
+    let scene: THREE.Scene,
+      camera: THREE.PerspectiveCamera,
+      renderer: THREE.WebGLRenderer,
+      loader: GLTFLoader;
+
+    // Scene setup
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    camera.position.set(0, 0, 5);
+
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(
+      canvasRef.current?.clientWidth || 0,
+      canvasRef.current?.clientHeight || 0
+    );
+    canvasRef.current?.appendChild(renderer.domElement);
+
+    const handleResize = () => {
+      const width = canvasRef.current?.clientWidth || 0;
+      const height = canvasRef.current?.clientHeight || 0;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+    window.addEventListener("resize", handleResize);
+
+    loader = new GLTFLoader();
+    loader.load("/X.gltf", (gltf) => {
+      const model = gltf.scene;
+
+      model.scale.set(0.5, 0.5, 0.5);
+      model.position.set(-0.5, 0, 0);
+      scene.add(model);
+      modelRef.current = model;
+    });
+
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    // GSAP ScrollTrigger animation
+    const handleScroll = () => {
+      if (modelRef.current) {
+        gsap.to(modelRef.current.position, {
+          x: 100,
+          y: 300,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".relative", // Update this to match your section or model container
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            markers: true,
+            onUpdate: (self) => {
+              console.log("Scroll progress:", self.progress); // Debug scroll progress
+            },
+          },
+        });
       }
     };
 
-    const handleEscapeKey = (event: any) => {
-      if (event.key === "Escape") {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("click", handleOutsideClick);
-    document.addEventListener("keydown", handleEscapeKey);
+    handleScroll();
 
     return () => {
-      document.removeEventListener("click", handleOutsideClick);
-      document.removeEventListener("keydown", handleEscapeKey);
+      window.removeEventListener("resize", handleResize);
+      renderer.dispose();
     };
   }, []);
 
@@ -34,13 +94,7 @@ const Hero = () => {
     <div>
       <nav className="relative px-4 py-4 flex justify-between items-center">
         <a className="text-3xl font-bold leading-none" href="#">
-          <Image
-            src="/Vector.png"
-            alt="Logo"
-            width={140}
-            height={140}
-            priority
-          />
+          <img src="/Vector.png" alt="Logo" width={140} height={140} />
         </a>
         <div className="flex items-center">
           <button
@@ -58,85 +112,12 @@ const Hero = () => {
           </button>
         </div>
       </nav>
-      <div
-        className={`navbar-menu relative z-50 ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
-      >
-        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-          <div className="flex items-center mb-8">
-            <a className="mr-auto text-3xl font-bold leading-none" href="#">
-              <Image
-                src="/Vector.png"
-                alt="Logo"
-                width={110}
-                height={130}
-                priority
-              />
-            </a>
-            <button
-              className="navbar-burger flex items-center color-600 p-4 h-12 w-16"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg
-                className="block h-6 w-6 fill-current"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Mobile menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
-          </div>
-          <ul>
-            <li className="mb-1">
-              <a
-                className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-              >
-                HOME
-              </a>
-            </li>
-            <li className="mb-1">
-              <a
-                className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-              >
-                ABOUT US
-              </a>
-            </li>
-            <li className="mb-1">
-              <a
-                className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-              >
-                CAREERS
-              </a>
-            </li>
-            <li className="mb-1">
-              <a
-                className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-              >
-                BLOGS
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white">
-        {/* Adjusted container to position image slightly upwards */}
-        <div className="absolute inset-0 flex justify-center items-center -top-12">
-          <Image
-            src="/X.png"
-            alt="Graphic Element"
-            objectFit="cover"
-            width={550}
-            height={550}
-            className="opacity-70"
-          />
-        </div>
+
+      <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
+        <div
+          ref={canvasRef}
+          className="absolute inset-0 z-0 w-full h-full"
+        ></div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-red-600 text-lg sm:text-xl font-semibold mb-4">
             Elevating your
@@ -154,22 +135,6 @@ const Hero = () => {
             visibility and impact. With our expertise, your online presence
             won't just stand out - it will excel.
           </p>
-
-          <div className="mt-8">
-            <div className="flex flex-col items-center">
-              <div className="text-white text-xs mb-2"></div>
-              <div className=" p-2">
-                <Image
-                  src="/toggle.png"
-                  alt="Logo"
-                  width={20}
-                  height={20}
-                  priority
-                  className="animate-bounce"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

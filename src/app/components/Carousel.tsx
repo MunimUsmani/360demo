@@ -8,7 +8,7 @@ const Carousel = () => {
         <h2 className="text-3xl lg:text-5xl font-light">
           Showcase <span className="text-red-600">of</span>
           <br className="text-red-600" />
-          Our Expertise
+          <span className="text-red-600">Our Expertise</span>
         </h2>
         <p className="mt-5 text-gray-400 font-light">
           Discover how 360XpertSolutions transforms businesses with innovative,
@@ -29,7 +29,7 @@ const Carousel = () => {
             }`}
           >
             <Image
-              src="/X.jpeg"
+              src="/pic1.png"
               alt={title}
               layout="fill"
               objectFit="cover"
