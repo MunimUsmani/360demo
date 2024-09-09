@@ -66,7 +66,7 @@ export default function CardStack() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center w-full max-w-4xl mt-24 mx-auto px-4 sm:px-6 lg:px-8">
       <div className="w-full">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-8 text-white font-['Clash_Display']">
           Our Proven <span className="text-red-600">Process</span>
@@ -89,8 +89,8 @@ export default function CardStack() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative z-10 flex flex-col justify-center h-full">
-                  <div className="flex flex-col items-start mb-4">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 -mt-4 relative">
+                  <div className="flex flex-col items-start">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative">
                       <Image
                         src="/X.png"
                         alt="X icon"
@@ -98,17 +98,17 @@ export default function CardStack() {
                         objectFit="contain"
                       />
                     </div>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999999]">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl mt-8 font-semibold font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999999]">
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display']">
+                  <p className="text-sm sm:text-base md:text-lg mt-8 text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display']">
                     {card.description}
                   </p>
                   {index === activeCards.length - 1 && (
                     <button
                       onClick={() => handleSwipe(card.id)}
-                      className="absolute bottom-4 right-4 bg-[#3C3C3C] rounded-full p-2 shadow-lg hover:bg-[#4C4C4C] transition-colors"
+                      className="absolute bottom-4 right-4 bg-[#3C3C3C] rounded-full border border-inherit p-2 shadow-lg hover:bg-[#3C3C3C] transition-colors"
                       aria-label="Next card"
                       disabled={swiping !== null}
                     >
