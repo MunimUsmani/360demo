@@ -7,9 +7,9 @@ import Image from "next/image";
 const cards = [
   {
     id: 1,
-    title: "Requirements",
+    title: "Maintenance",
     description:
-      "Understanding your goals in detail, ensuring a solid foundation for successful software development.",
+      "Provide ongoing support and maintenance to keep the software up-to-date and secure.",
   },
   {
     id: 2,
@@ -37,9 +37,10 @@ const cards = [
   },
   {
     id: 6,
-    title: "Maintenance",
-    description:
-      "Provide ongoing support and maintenance to keep the software up-to-date and secure.",
+   
+      title: "Requirements",
+      description:
+        "Understanding your goals in detail, ensuring a solid foundation for successful software development.",
   },
 ];
 
