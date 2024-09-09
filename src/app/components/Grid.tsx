@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const Grid = () => {
-  // Object to track hover states for each icon
   const [hoverStates, setHoverStates] = useState({
     dms: false,
     eagle: false,
@@ -15,13 +14,11 @@ const Grid = () => {
     bykea: false,
   });
 
-  // Function to handle mouse enter
-  const handleMouseEnter = (icon: any) => {
+  const handleMouseEnter = (icon: string) => {
     setHoverStates((prevState) => ({ ...prevState, [icon]: true }));
   };
 
-  // Function to handle mouse leave
-  const handleMouseLeave = (icon: any) => {
+  const handleMouseLeave = (icon: string) => {
     setHoverStates((prevState) => ({ ...prevState, [icon]: false }));
   };
 
@@ -53,7 +50,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-r border-b lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-b lg:w-1/4 md:border-r"
           onMouseEnter={() => handleMouseEnter("eagle")}
           onMouseLeave={() => handleMouseLeave("eagle")}
         >
@@ -72,7 +69,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-r border-b lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4 md:border-l-0"
           onMouseEnter={() => handleMouseEnter("ctc")}
           onMouseLeave={() => handleMouseLeave("ctc")}
         >
@@ -131,7 +128,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-r border-t lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-l border-t lg:w-1/4 md:border-l-0"
           onMouseEnter={() => handleMouseEnter("stc")}
           onMouseLeave={() => handleMouseLeave("stc")}
         >
@@ -148,7 +145,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-r border-t lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-l border-r border-t lg:w-1/4 md:border-l-0 md:border-r-0"
           onMouseEnter={() => handleMouseEnter("bussma")}
           onMouseLeave={() => handleMouseLeave("bussma")}
         >

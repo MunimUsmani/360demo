@@ -22,7 +22,7 @@ const Highlight = () => {
           future is limitless.
         </p>
       </div>
-
+      {/* 
       <div className="right-0 bottom-0 md:static md:w-1/2 transform md:transform-none md:-rotate-12 scale-125 mb-12 ml-55 -mr-24">
         <Image
           src="/X.png"
@@ -31,7 +31,7 @@ const Highlight = () => {
           height={300}
           className="opacity-90 md:rotate-[-20deg]"
         />
-      </div>
+      </div> */}
     </section>
   );
 };
