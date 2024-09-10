@@ -37,10 +37,10 @@ const cards = [
   },
   {
     id: 6,
-   
-      title: "Requirements",
-      description:
-        "Understanding your goals in detail, ensuring a solid foundation for successful software development.",
+
+    title: "Requirements",
+    description:
+      "Understanding your goals in detail, ensuring a solid foundation for successful software development.",
   },
 ];
 
@@ -66,12 +66,12 @@ export default function CardStack() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full max-w-4xl mt-24 mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden">
       <div className="w-full">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-8 text-white font-['Clash_Display']">
           Our Proven <span className="text-red-600">Process</span>
         </h2>
-        <div className="relative h-[300px] sm:h-[350px] md:h-[400px]">
+        <div className="relative h-[500px] sm:h-[200px] md:h-[500px] w-[90%]">
           <AnimatePresence>
             {activeCards.map((card, index) => (
               <motion.div
@@ -82,7 +82,7 @@ export default function CardStack() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{
                   opacity: swiping === card.id ? 0 : 1,
-                  x: swiping === card.id ? "120%" : `${index * 3}%`,
+                  x: swiping === card.id ? "120%" : `${index * 2}%`,
                   scale: index === activeCards.length - 1 ? 1 : 0.95,
                 }}
                 exit={{ opacity: 0, x: -50 }}

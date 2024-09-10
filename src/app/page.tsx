@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import Hero from "@/app/components/Hero";
 import Card from "@/app/components/Card";
 import Highlight from "./components/Highlight";
@@ -12,6 +13,7 @@ import TechAndTools from "./components/TechAndTools";
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <Hero />
       <Card />
       <Highlight />

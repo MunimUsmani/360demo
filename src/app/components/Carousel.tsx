@@ -4,10 +4,11 @@ import Image from "next/image";
 const Carousel = () => {
   return (
     <section className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16">
+      {/* Left section: Text content */}
       <div className="flex-1 max-w-lg lg:max-w-xs text-center lg:text-left">
         <h2 className="text-2xl md:text-3xl lg:text-5xl font-light">
           Showcase <span className="text-red-600">of</span>
-          <br className="text-red-600" />
+          <br />
           <span className="text-red-600">Our Expertise</span>
         </h2>
         <p className="mt-4 md:mt-5 text-gray-400 font-light text-sm md:text-base">
@@ -18,6 +19,7 @@ const Carousel = () => {
         </p>
       </div>
 
+      {/* Right section: Image carousel */}
       <div className="flex-1 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 ml-0 md:ml-6 lg:ml-12">
         {["Break Time", "Invent", "Green Tech"].map((title, index) => (
           <div
@@ -31,7 +33,7 @@ const Carousel = () => {
             }`}
           >
             <Image
-              src="/pic1.png"
+              src={`/pic1.png`}
               alt={title}
               layout="fill"
               objectFit="cover"

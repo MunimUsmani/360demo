@@ -1,12 +1,12 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Hero: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+export default function Hero() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   const modelRef = useRef<THREE.Group | null>(null);
 
@@ -91,54 +91,25 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <nav className="relative px-4 py-4 flex justify-between items-center">
-        <a className="text-3xl font-bold leading-none" href="#">
-          <img src="/Vector.png" alt="Logo" width={140} height={140} />
-        </a>
-        <div className="flex items-center">
-          <button
-            className="navbar-burger flex items-center bg-white-600 p-3 h-10 w-10"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-      <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
-        <div
-          ref={canvasRef}
-          className="absolute inset-0 z-0 w-full h-full"
-        ></div>
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-red-600 text-lg sm:text-xl font-semibold mb-4">
-            Elevating your
-          </h2>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4">
-            Digital
-          </h1>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light">
-            Presence
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300">
-            At{" "}
-            <span className="text-white font-semibold">360XpertSolution</span>,
-            we craft innovative digital solutions that amplify your brand's
-            visibility and impact. With our expertise, your online presence
-            won't just stand out - it will excel.
-          </p>
-        </div>
-      </section>
-    </div>
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
+      <div ref={canvasRef} className="absolute inset-0 z-0 w-full h-full"></div>
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+        <h2 className="text-red-600 text-lg sm:text-xl font-semibold mb-4">
+          Elevating your
+        </h2>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4">
+          Digital
+        </h1>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light">
+          Presence
+        </h1>
+        <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300">
+          At <span className="text-white font-semibold">360XpertSolution</span>,
+          we craft innovative digital solutions that amplify your brand's
+          visibility and impact. With our expertise, your online presence won't
+          just stand out - it will excel.
+        </p>
+      </div>
+    </section>
   );
-};
-
-export default Hero;
+}

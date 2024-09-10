@@ -4,6 +4,7 @@ import Image from "next/image";
 const Highlight = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white min-h-screen px-6 py-12 md:px-12 lg:px-24">
+      {/* Left Section - Text */}
       <div className="max-w-lg md:max-w-xl gap-10">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-300">
           <span className="text-red-600">Crafting</span> the
@@ -22,15 +23,17 @@ const Highlight = () => {
           future is limitless.
         </p>
       </div>
-      {/* 
-      <div className="right-0 bottom-0 md:static md:w-1/2 transform md:transform-none md:-rotate-12 scale-125 mb-12 ml-55 -mr-24">
-        <Image
-          src="/X.png"
-          alt="Graphic Element"
-          width={300}
-          height={300}
-          className="opacity-90 md:rotate-[-20deg]"
-        />
+
+      {/* <div className="mt-12 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
+        <div className="relative w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 transform scale-110 md:scale-100">
+          <Image
+            src="/X.png"  
+            alt="Graphic Element"
+            layout="fill"
+            objectFit="contain"
+            className="opacity-90"
+          />
+        </div>
       </div> */}
     </section>
   );

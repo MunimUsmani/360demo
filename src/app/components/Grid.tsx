@@ -33,7 +33,7 @@ const Grid = () => {
       <div className="flex flex-wrap justify-center mx-auto lg:w-full md:w-5/6 xl:shadow-small-blue">
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-r border-b lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-r border-b lg:w-1/4 lg:border-r lg:border-b"
           onMouseEnter={() => handleMouseEnter("dms")}
           onMouseLeave={() => handleMouseLeave("dms")}
         >
@@ -50,7 +50,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-b lg:w-1/4 md:border-r"
+          className="block w-1/2 py-10 text-center border-b lg:w-1/4 lg:border-b"
           onMouseEnter={() => handleMouseEnter("eagle")}
           onMouseLeave={() => handleMouseLeave("eagle")}
         >
@@ -69,7 +69,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4 md:border-l-0"
+          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4 md:border-l-0 lg:border-l"
           onMouseEnter={() => handleMouseEnter("ctc")}
           onMouseLeave={() => handleMouseLeave("ctc")}
         >
@@ -86,7 +86,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4 lg:border-l"
           onMouseEnter={() => handleMouseEnter("wisayah")}
           onMouseLeave={() => handleMouseLeave("wisayah")}
         >
@@ -107,7 +107,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-r border-t lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-r border-t lg:w-1/4 lg:border-r lg:border-t"
           onMouseEnter={() => handleMouseEnter("hassana")}
           onMouseLeave={() => handleMouseLeave("hassana")}
         >
@@ -128,7 +128,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-t lg:w-1/4 md:border-l-0"
+          className="block w-1/2 py-10 text-center lg:w-1/4"
           onMouseEnter={() => handleMouseEnter("stc")}
           onMouseLeave={() => handleMouseLeave("stc")}
         >
@@ -145,7 +145,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-r border-t lg:w-1/4 md:border-l-0 md:border-r-0"
+          className="block w-1/2 py-10 text-center border-l border-t border-r lg:w-1/4 lg:border-l lg:border-r lg:border-t md:border-l-0 md:border-r-0"
           onMouseEnter={() => handleMouseEnter("bussma")}
           onMouseLeave={() => handleMouseLeave("bussma")}
         >
@@ -166,7 +166,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-t lg:w-1/4"
+          className="block w-1/2 py-10 text-center border-l border-t lg:w-1/4 lg:border-l lg:border-t"
           onMouseEnter={() => handleMouseEnter("bykea")}
           onMouseLeave={() => handleMouseLeave("bykea")}
         >
