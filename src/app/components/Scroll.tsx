@@ -21,8 +21,8 @@ const Scroll = () => {
           transition: "transform 20ms linear",
         }}
       >
-        <span className="text-lg font-bold text-gray-500">
-          What's holding you back? What's holding you back? What's holding you
+        <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] ">
+          What's holding you back?      &nbsp;    &nbsp;      What's holding you back?       &nbsp;    &nbsp;   What's holding you
           back?
         </span>
       </div>
