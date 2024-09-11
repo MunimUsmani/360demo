@@ -23,11 +23,11 @@ const Grid = () => {
   };
 
   return (
-    <div className="container relative z-40 mx-auto mt-16">
-      <h1 className="text-center text-white text-4xl font-bold mb-2">
+    <div className="container relative z-40 mx-auto mt-16 mx-0">
+      <h1 className="text-center text-white text-4xl font-bold mb-2 font-['Clash_Display']">
         Mastering Advanced <span className="text-red-600">Expertise</span>
       </h1>
-      <p className="text-xl mb-16 text-center text-white">
+      <p className="text-xl mb-16 text-center text-white font-['Clash_Display']">
         Becoming an Expert Through Advanced Skills and Knowledge
       </p>
       <div className="flex flex-wrap justify-center mx-auto lg:w-full md:w-5/6 xl:shadow-small-blue">

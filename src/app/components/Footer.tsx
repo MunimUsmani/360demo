@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E1E1E] text-white p-10 font-['Arial'] mx-4 md:mx-8 lg:mx-16 mb-8 rounded-lg mt-16">
+    <footer className="bg-[#1E1E1E] text-white p-10 font-['Arial'] mx-4 md:mx-8 lg:mx-16 mb-8 rounded-lg mt-16 mx-0">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
           <div className="mb-8 lg:mb-0">
@@ -13,14 +13,14 @@ export default function Footer() {
               width={180}
               height={36}
             />
-            <p className="mt-8 text-[13px] leading-[18px] max-w-[300px] text-[#9B9B9B]">
+            <p className="mt-8 text-[13px] leading-[18px] max-w-[300px] text-[#9B9B9B] font-['Clash_Display']">
               Accelerating innovation,
               <br />
               Amplifying impact. We <br />
               transform visions into reality.
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-16">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-16 font-['Clash_Display']">
             <div>
               <p className="font-bold text-[15px]">800 00 975 20 34</p>
               <p className="text-[13px] text-[#9B9B9B] mb-10">
@@ -28,14 +28,16 @@ export default function Footer() {
               </p>
               <Link
                 href="mailto:info@techxworlds.co"
-                className="text-[13px] hover:text-[#9B9B9B]"
+                className="text-[13px] hover:text-[#9B9B9B] font-['Clash_Display']"
               >
                 info@techxworlds.co
               </Link>
             </div>
             <div>
-              <p className="font-bold text-[15px]">Dubai Silicon Oasis, DSO</p>
-              <p className="text-[13px] text-[#9B9B9B] mb-10">
+              <p className="font-bold text-[15px] font-['Clash_Display']">
+                Dubai Silicon Oasis, DSO
+              </p>
+              <p className="text-[13px] text-[#9B9B9B] mb-10 font-['Clash_Display']">
                 Building #12, Dubai, UAE
               </p>
               {/* Social media icons */}
@@ -74,7 +76,7 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col space-y-2 text-[13px]">
+            <div className="flex flex-col space-y-2 text-[13px] font-['Clash_Display']">
               <Link href="/about-us" className="hover:text-[#9B9B9B]">
                 About Us
               </Link>
@@ -91,15 +93,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-[#2D2D2D] pt-8 flex flex-col lg:flex-row justify-between items-center">
+        <div className="border-[#2D2D2D] pt-8 flex flex-col lg:flex-row justify-between items-center font-['Clash_Display']">
           <p className="text-[11px] text-[#9B9B9B] mb-4 lg:mb-0 lg:self-start lg:mr-auto">
             © 2023 Samurai Systems. All rights reserved.
           </p>
-          <div className="flex justify-center lg:justify-end space-x-4 text-[11px] text-[#9B9B9B]">
+          <div className="flex justify-center lg:justify-end space-x-4 text-[11px] text-[#9B9B9B] font-['Clash_Display']">
             <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
             </Link>
-            <Link href="/terms-conditions" className="hover:underline">
+            <Link
+              href="/terms-conditions"
+              className="hover:underline font-['Clash_Display']"
+            >
               Terms & Conditions
             </Link>
           </div>

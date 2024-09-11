@@ -1,9 +1,21 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@300,400,500,600,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   background-color: #181815;
-  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 0;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/clash-display.woff2") format("woff2"),
+    url("/fonts/clash-display.woff") format("woff");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
 }

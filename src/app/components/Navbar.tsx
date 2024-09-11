@@ -17,8 +17,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#181815] shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-[#181815] shadow-md font-['Clash_Display']">
+      <div className="max-w-7xl mx-0 px-4 sm:px-6 lg:px-8">
+        {" "}
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
             <Link href="/" className="">
@@ -82,7 +83,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-
         {isMenuOpen && (
           <div className="sm:hidden mt-2">
             <div className="space-y-2">

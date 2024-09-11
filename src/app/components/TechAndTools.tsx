@@ -13,20 +13,20 @@ export default function TechAndTools() {
   ];
 
   return (
-    <div className="bg-[#181815] text-white p-8 mt-32">
+    <div className="bg-[#181815] text-white p-8 mt-32 mx-0">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-light mb-4 ">
+          <h1 className="text-4xl md:text-6xl font-light mb-4 font-['Clash_Display']">
             Tech and Tool <span className="text-red-500">We Use</span>
           </h1>
-          <p className="text-gray-400 mx-auto max-w-2xl">
+          <p className="text-gray-400 mx-auto max-w-2xl font-['Clash_Display']">
             Our developers use the latest technologies and frameworks to build{" "}
             <br />
             powerful solutions with sleek, user-friendly designs
           </p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center font-['Clash_Display']">
           <div className="bg-gray-800 rounded-tr-[50px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-[90%] mx-auto">
             <div className="bg-[#181815] flex flex-col md:flex-row h-full border border-[#3C3C3C]">
               <div className="p-4 md:p-8 md:w-1/2">

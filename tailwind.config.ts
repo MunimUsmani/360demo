@@ -11,6 +11,9 @@ const config: Config = {
       backgroundImage: {
         "custom-x": "url('/X.png')",
       },
+      fontFamily: {
+        clash: ['Clash Display', 'sans-serif'],
+      }, 
     },
   },
   plugins: [],

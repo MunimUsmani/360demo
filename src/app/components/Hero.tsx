@@ -69,7 +69,7 @@ export default function Hero() {
           y: 300,
           ease: "none",
           scrollTrigger: {
-            trigger: ".relative", // Update this to match your section or model container
+            trigger: ".relative",
             start: "top top",
             end: "bottom bottom",
             scrub: true,
@@ -91,19 +91,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden mx-0">
       <div ref={canvasRef} className="absolute inset-0 z-0 w-full h-full"></div>
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-red-600 text-lg sm:text-xl font-semibold mb-4">
+        <h2 className="font-['Clash_Display'] text-custom-size font-light leading-custom-line text-center mb-4">
           Elevating your
         </h2>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4">
+
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-['Clash_Display']">
           Digital
         </h1>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light font-['Clash_Display']">
           Presence
         </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300">
+        <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 font-['Clash_Display']">
           At <span className="text-white font-semibold">360XpertSolution</span>,
           we craft innovative digital solutions that amplify your brand&apos;s
           visibility and impact. With our expertise, your online presence
