@@ -13,27 +13,26 @@ export default function TechAndTools() {
   ];
 
   return (
-    <div className="bg-[#181815] text-white p-8 mt-32 mx-0">
+    <div className="bg-[#181815] text-white p-4 md:p-8 mt-32 mx-0">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-light mb-4 font-['Clash_Display']">
-            Tech and Tool <span className="text-red-500">We Use</span>
+        <div className="text-center mb-8 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-light mb-4 font-['Clash_Display']">
+            Tech and Tools <span className="text-red-500">We Use</span>
           </h1>
-          <p className="text-gray-400 mx-auto max-w-2xl font-['Clash_Display']">
+          <p className="text-gray-400 mx-auto max-w-xl md:max-w-2xl font-['Clash_Display'] leading-snug md:leading-normal">
             Our developers use the latest technologies and frameworks to build{" "}
-            <br />
             powerful solutions with sleek, user-friendly designs
           </p>
         </div>
 
         <div className="flex justify-center items-center font-['Clash_Display']">
-          <div className="bg-gray-800 rounded-tr-[50px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-[90%] mx-auto">
+          <div className="bg-gray-800 rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[90%] mx-auto">
             <div className="bg-[#181815] flex flex-col md:flex-row h-full border border-[#3C3C3C]">
               <div className="p-4 md:p-8 md:w-1/2">
                 <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 mt-4 md:mt-6">
                   Artificial Intelligence
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-[#181815]">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {tools.map((tool) => (
                     <div
                       key={tool.name}
@@ -52,7 +51,7 @@ export default function TechAndTools() {
                 </div>
               </div>
               <div className="md:w-1/2 relative flex items-center justify-center">
-                <div className="w-full h-[200px] sm:h-[300px] md:h-[400px] relative overflow-hidden">
+                <div className="w-full h-[150px] sm:h-[200px] md:h-[400px] relative overflow-hidden">
                   <video
                     className="object-cover w-full h-full"
                     autoPlay

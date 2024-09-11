@@ -2,8 +2,8 @@ import React from "react";
 
 const Wording = () => {
   return (
-    <div className="max-w-3xl mx-auto text-center p-5">
-      <h1 className="text-center text-white sm:text-2xl md:text-6xl lg:text-7xl font-bold leading-tight font-['Clash_Display'] mx-0">
+    <div className="max-w-3xl mx-auto text-center p-5 sm:p-6 md:p-8">
+      <h1 className="text-center text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-['Clash_Display'] mx-0">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300] font-['Clash_Display']">
           Become
         </span>{" "}
@@ -13,8 +13,8 @@ const Wording = () => {
         </span>
       </h1>
       <a
-        href=""
-        className="mt-8 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white font-bold py-2 px-8 rounded-full inline-block text-lg md:text-xl font-['Clash_Display']"
+        href="#"
+        className="mt-8 sm:mt-10 md:mt-12 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white font-bold py-2 sm:py-3 md:py-4 px-8 sm:px-10 md:px-12 rounded-full inline-block text-base sm:text-lg md:text-xl font-['Clash_Display']"
       >
         Start the Conversation
       </a>
