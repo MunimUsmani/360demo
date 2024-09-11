@@ -69,7 +69,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-b lg:w-1/4 md:border-l-0 lg:border-l"
+          className="block w-1/2 py-10 text-center border-b lg:w-1/4 md:border-l-0 lg:border-l"
           onMouseEnter={() => handleMouseEnter("ctc")}
           onMouseLeave={() => handleMouseLeave("ctc")}
         >
@@ -145,7 +145,7 @@ const Grid = () => {
 
         <a
           href="#"
-          className="block w-1/2 py-10 text-center border-l border-t border-r lg:w-1/4 lg:border-l lg:border-r lg:border-t md:border-l-0 md:border-r-0"
+          className="block w-1/2 py-10 text-center border-t border-r lg:w-1/4 lg:border-l lg:border-r lg:border-t md:border-l-0 md:border-r-0"
           onMouseEnter={() => handleMouseEnter("bussma")}
           onMouseLeave={() => handleMouseLeave("bussma")}
         >
