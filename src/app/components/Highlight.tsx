@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Highlight = () => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white min-h-screen px-6 py-12 md:px-12 lg:px-24">
+    <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white px-6 py-12 md:px-12 lg:px-24">
       {/* Left Section - Text */}
       <div className="max-w-lg md:max-w-xl gap-10">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-300">

@@ -13,7 +13,7 @@ export default function TechAndTools() {
   ];
 
   return (
-    <div className="bg-[#181815] text-white min-h-screen p-8 mt-32">
+    <div className="bg-[#181815] text-white p-8 mt-32">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-light mb-4 ">
