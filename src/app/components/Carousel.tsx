@@ -6,12 +6,17 @@ const Carousel = () => {
     <section className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16">
       {/* Left section: Text content */}
       <div className="flex-1 max-w-lg lg:max-w-xs text-center lg:text-left">
-        <h2 className="text-2xl md:text-3xl lg:text-5xl font-light">
-          Showcase <span className="text-red-600">of</span>
+        <h2 className="text-2xl md:text-3xl lg:text-5xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999]">
+          Showcase{" "}
+          <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300]">
+            of
+          </span>
           <br />
-          <span className="text-red-600">Our Expertise</span>
+          <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300]">
+            Our Expertise
+          </span>
         </h2>
-        <p className="mt-4 md:mt-5 text-gray-400 font-light text-sm md:text-base">
+        <p className="mt-4 md:mt-5 text-gray-400 font-light text-sm md:text-base leading-6 md:leading-7 lg:leading-9">
           Discover how 360XpertSolutions transforms businesses with innovative,
           AI-powered solutions. Explore our portfolio to see successful projects
           that enhance customer engagement and streamline operations across
@@ -29,7 +34,7 @@ const Carousel = () => {
             } h-[280px] sm:h-[360px] rounded-lg overflow-hidden group transition-all duration-300 ease-in-out ${
               index === 0
                 ? "hover:w-[260px] sm:hover:w-[340px]"
-                : "hover:w-[180px] sm:hover:w-[300px]"
+                : "hover:w-[180px] sm:hover:w-[220px]"
             }`}
           >
             <Image

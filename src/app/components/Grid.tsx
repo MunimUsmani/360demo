@@ -23,7 +23,7 @@ const Grid = () => {
   };
 
   return (
-    <div className="container relative z-40 mx-auto">
+    <div className="container relative z-40 mx-auto mt-16">
       <h1 className="text-center text-white text-4xl font-bold mb-2">
         Mastering Advanced <span className="text-red-600">Expertise</span>
       </h1>

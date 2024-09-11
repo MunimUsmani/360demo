@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
     { href: "/Careers", label: "CAREERS" },
@@ -18,26 +19,37 @@ export default function Navbar() {
   return (
     <nav className="bg-[#181815] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex-shrink-0">
+            <Link href="/" className="">
               <Image
                 src="/Vector.png"
                 alt="Logo"
-                width={150}
+                width={180}
                 height={180}
                 className="w-auto h-8"
               />
             </Link>
           </div>
-          <div className="flex items-center">
+
+          <div className="flex items-center sm:hidden">
+            <button
+              className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <span className="sr-only">Open menu</span>
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+
+          <div className="hidden sm:flex items-center">
             <div
               className="relative"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               <button
-                className="p-2 rounded-md text-gray-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                 aria-expanded={isHovered}
               >
                 <span className="sr-only">Open menu</span>
@@ -70,6 +82,22 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {isMenuOpen && (
+          <div className="sm:hidden mt-2">
+            <div className="space-y-2">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block text-gray-100 hover:text-gray-300 text-base"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
