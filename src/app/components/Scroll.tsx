@@ -22,8 +22,8 @@ const Scroll = () => {
         }}
       >
         <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] ">
-          What's holding you back? &nbsp; &nbsp; What's holding you back? &nbsp;
-          &nbsp; What's holding you back?
+          What&apos;s holding you back? &nbsp; &nbsp; What&apos;s holding you
+          back? &nbsp; &nbsp; What&apos;s holding you back?
         </span>
       </div>
     </div>

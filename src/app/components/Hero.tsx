@@ -30,14 +30,14 @@ export default function Hero() {
 
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(
-      canvasRef.current?.clientWidth || 0,
-      canvasRef.current?.clientHeight || 0
+      canvasRef.current ? canvasRef.current.clientWidth : 0,
+      canvasRef.current ? canvasRef.current.clientHeight : 0
     );
-    canvasRef.current?.appendChild(renderer.domElement);
+    canvasRef.current && canvasRef.current.appendChild(renderer.domElement);
 
     const handleResize = () => {
-      const width = canvasRef.current?.clientWidth || 0;
-      const height = canvasRef.current?.clientHeight || 0;
+      const width = canvasRef.current ? canvasRef.current.clientWidth : 0;
+      const height = canvasRef.current ? canvasRef.current.clientHeight : 0;
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
@@ -105,9 +105,9 @@ export default function Hero() {
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300">
           At <span className="text-white font-semibold">360XpertSolution</span>,
-          we craft innovative digital solutions that amplify your brand's
-          visibility and impact. With our expertise, your online presence won't
-          just stand out - it will excel.
+          we craft innovative digital solutions that amplify your brand&apos;s
+          visibility and impact. With our expertise, your online presence
+          won&apos;t just stand out - it will excel.
         </p>
       </div>
     </section>
