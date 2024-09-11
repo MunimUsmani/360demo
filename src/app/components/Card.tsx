@@ -71,7 +71,7 @@ export default function CardStack() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-8 text-white font-['Clash_Display'] mx-0">
           Our Proven <span className="text-red-600 ">Process</span>
         </h2>
-        <div className="relative h-[500px] sm:h-[200px] md:h-[500px] w-[90%]">
+        <div className="relative h-[350px] sm:h-[200px] md:h-[500px] w-[90%]">
           <AnimatePresence>
             {activeCards.map((card, index) => (
               <motion.div
@@ -90,7 +90,7 @@ export default function CardStack() {
               >
                 <div className="relative z-10 flex flex-col justify-center h-full">
                   <div className="flex flex-col items-start">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative -mt-10">
                       <Image
                         src="/X.png"
                         alt="X icon"
@@ -102,9 +102,10 @@ export default function CardStack() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg mt-8 text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display']">
+                  <p className="text-sm sm:text-base md:text-lg mt-8 text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display'] w-full max-w-[80%] break-words">
                     {card.description}
                   </p>
+
                   {index === activeCards.length - 1 && (
                     <button
                       onClick={() => handleSwipe(card.id)}
