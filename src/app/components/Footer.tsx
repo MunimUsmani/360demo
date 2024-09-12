@@ -40,7 +40,7 @@ export default function Footer() {
               <p className="text-[13px] text-[#9B9B9B] mb-10 font-['Clash_Display']">
                 Building #12, Dubai, UAE
               </p>
-              {/* Social media icons */}
+
               <div className="flex space-x-4">
                 <Link href="#" aria-label="Facebook">
                   <Image

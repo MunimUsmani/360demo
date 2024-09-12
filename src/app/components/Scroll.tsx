@@ -21,7 +21,7 @@ const Scroll = () => {
           transition: "transform 20ms linear",
         }}
       >
-        <span className="text-[4vw] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] font-['Clash_Display']">
+        <span className="text-[4vw] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] font-['Clash_Display'] px-4 py-2 rounded-md">
           What&apos;s holding you back? &nbsp; &nbsp; What&apos;s holding you
           back? &nbsp; &nbsp; What&apos;s holding you back?
         </span>

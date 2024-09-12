@@ -7,7 +7,7 @@ export default function TechAndTools() {
     { name: "OpenAI", logo: "/gpt.png" },
     { name: "PyTorch", logo: "/pytorch.png" },
     { name: "Pandas", logo: "/pandas.png" },
-    { name: "TensorFlow", logo: "/tensorflow.png" },
+    { name: "Tensor-Flow", logo: "/tensorflow.png" },
     { name: "SciPy", logo: "/scipy.png" },
     { name: "NumPy", logo: "/numpy.png" },
   ];
