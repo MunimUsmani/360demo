@@ -86,7 +86,10 @@ export default function CardStack() {
                   scale: index === activeCards.length - 1 ? 1 : 0.95,
                 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.3 }}
+                transition={{
+                  duration: 0.6, // Increased duration for smoother animation
+                  ease: [0.42, 0, 0.58, 1], // Added custom easing for a more natural feel
+                }}
               >
                 <div className="relative z-10 flex flex-col justify-center h-full">
                   <div className="flex flex-col items-start">
