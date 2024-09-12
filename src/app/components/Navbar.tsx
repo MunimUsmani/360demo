@@ -17,11 +17,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#181815] shadow-md font-['Clash_Display']">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            <Link href="/" className="">
+    <nav className="bg-[#181815] shadow-md top-0 left-0 right-0 z-50">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0 ml-0 sm:ml-[20px]">
+            <Link href="/">
               <Image
                 src="/Vector.png"
                 alt="Logo"
@@ -32,7 +33,8 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="flex items-center sm:hidden">
+          {/* Mobile Menu Button */}
+          <div className="flex items-center sm:hidden mr-0 sm:mr-[20px]">
             <button
               className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -42,7 +44,8 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="hidden sm:flex items-center">
+          {/* Desktop Menu */}
+          <div className="hidden sm:flex items-center justify-end flex-grow mr-0 sm:mr-[20px]">
             <div
               className="relative"
               onMouseEnter={() => setIsHovered(true)}
@@ -55,6 +58,7 @@ export default function Navbar() {
                 <span className="sr-only">Open menu</span>
                 <Menu className="h-6 w-6" aria-hidden="true" />
               </button>
+
               <div
                 className={`absolute top-0 right-full h-full flex items-center transition-all duration-300 ease-in-out overflow-hidden ${
                   isHovered ? "w-auto opacity-100" : "w-0 opacity-0"
@@ -83,8 +87,9 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="sm:hidden mt-2">
+          <div className="sm:hidden mt-2 pb-4">
             <div className="space-y-2">
               {links.map((link) => (
                 <Link

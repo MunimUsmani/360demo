@@ -105,8 +105,8 @@ export default function Hero() {
           Presence
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 font-['Clash_Display']">
-          At <span className="text-white font-semibold">360XpertSolution</span>,
-          we craft innovative digital solutions that amplify your brand&apos;s
+          At <span className="text-white font-semibold">360XpertSolutions</span>
+          , we craft innovative digital solutions that amplify your brand&apos;s
           visibility and impact. With our expertise, your online presence
           won&apos;t just stand out - it will excel.
         </p>
