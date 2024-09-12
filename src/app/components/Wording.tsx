@@ -13,8 +13,8 @@ const Wording = () => {
         </span>
       </h1>
       <a
-        href="#"
-        className="mt-8 sm:mt-10 md:mt-12 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white font-bold py-2 sm:py-3 md:py-4 px-8 sm:px-10 md:px-12 rounded-full inline-block text-base sm:text-lg md:text-xl font-['Clash_Display']"
+        href=""
+        className="mt-8 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white font-bold py-2 px-8 rounded-full inline-block text-lg md:text-xl font-['Clash_Display']"
       >
         Start the Conversation
       </a>

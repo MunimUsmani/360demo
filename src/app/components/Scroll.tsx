@@ -21,15 +21,18 @@ const Scroll = () => {
           transition: "transform 0.02s linear",
         }}
       >
-        {/* Duplicate the text twice for continuous scrolling */}
-        <span className="text-[4vw] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] font-['Clash_Display'] px-4 py-2 rounded-md">
-          What&apos;s holding you back? &nbsp; &nbsp; What&apos;s holding you
-          back? &nbsp; &nbsp; What&apos;s holding you back?
-        </span>
-        <span className="text-[4vw] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] font-['Clash_Display'] px-4 py-2 rounded-md">
-          What&apos;s holding you back? &nbsp; &nbsp; What&apos;s holding you
-          back? &nbsp; &nbsp; What&apos;s holding you back?
-        </span>
+        {/* Repeat the text multiple times for infinite scrolling */}
+        {Array(10)
+          .fill("")
+          .map((_, index) => (
+            <span
+              key={index}
+              className="text-[4vw] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999] font-['Clash_Display'] px-4 py-2 rounded-md"
+            >
+              What&apos;s holding you back? &nbsp; &nbsp; What&apos;s holding
+              you back? &nbsp; &nbsp; What&apos;s holding you back?
+            </span>
+          ))}
       </div>
     </div>
   );
