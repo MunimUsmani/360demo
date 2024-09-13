@@ -47,6 +47,7 @@ const cards = [
 export default function CardStack() {
   const [activeCards, setActiveCards] = useState(cards);
   const [swiping, setSwiping] = useState<number | null>(null);
+  const [swipedCards, setSwipedCards] = useState<typeof cards>([]);
 
   useEffect(() => {
     if (activeCards.length === 0) {
@@ -58,11 +59,23 @@ export default function CardStack() {
     setSwiping(id);
     setTimeout(() => {
       setActiveCards((prev) => {
+        const swipedCard = prev.find((card) => card.id === id);
         const newCards = prev.filter((card) => card.id !== id);
+        if (swipedCard) {
+          setSwipedCards((prevSwiped) => [...prevSwiped, swipedCard]);
+        }
         return newCards.length === 0 ? cards : newCards;
       });
       setSwiping(null);
     }, 300);
+  };
+
+  const handleBringBack = () => {
+    if (swipedCards.length > 0) {
+      const lastSwipedCard = swipedCards[swipedCards.length - 1];
+      setActiveCards((prev) => [lastSwipedCard, ...prev]);
+      setSwipedCards((prev) => prev.slice(0, -1));
+    }
   };
 
   return (
@@ -85,11 +98,14 @@ export default function CardStack() {
                   x: swiping === card.id ? "120%" : `${index * 2}%`,
                   scale: index === activeCards.length - 1 ? 1 : 0.95,
                 }}
-                exit={{ opacity: 0, x: -50 }}
+                exit={{ opacity: 0, x: "120%" }}
                 transition={{
                   duration: 0.6, // Increased duration for smoother animation
                   ease: [0.42, 0, 0.58, 1], // Added custom easing for a more natural feel
                 }}
+                onClick={
+                  index === activeCards.length - 1 ? handleBringBack : undefined
+                }
               >
                 <div className="relative z-10 flex flex-col justify-center h-full">
                   <div className="flex flex-col items-start">
@@ -111,7 +127,10 @@ export default function CardStack() {
 
                   {index === activeCards.length - 1 && (
                     <button
-                      onClick={() => handleSwipe(card.id)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSwipe(card.id);
+                      }}
                       className="absolute bottom-4 right-4 bg-[#3C3C3C] rounded-full border border-inherit p-2 shadow-lg hover:bg-[#3C3C3C] transition-colors"
                       aria-label="Next card"
                       disabled={swiping !== null}

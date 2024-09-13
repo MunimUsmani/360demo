@@ -7,7 +7,6 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
     { href: "/Careers", label: "CAREERS" },
@@ -20,39 +19,26 @@ export default function Navbar() {
     <nav className="bg-[#181815] shadow-md top-0 left-0 right-0 z-50">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0 ml-0 sm:ml-[20px]">
             <Link href="/">
               <Image
                 src="/Vector.png"
                 alt="Logo"
-                width={180}
-                height={180}
-                className="w-auto h-8"
+                width={240}
+                height={240}
+                className="w-auto h-10 sm:h-12"
               />
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center sm:hidden mr-0 sm:mr-[20px]">
-            <button
-              className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <span className="sr-only">Open menu</span>
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden sm:flex items-center justify-end flex-grow mr-0 sm:mr-[20px]">
+          <div className="flex items-center mr-0 sm:mr-[20px]">
             <div
               className="relative"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               <button
-                className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                className="p-2 rounded-md text-gray-400 hover:text-white"
                 aria-expanded={isHovered}
               >
                 <span className="sr-only">Open menu</span>
@@ -86,23 +72,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="sm:hidden mt-2 pb-4">
-            <div className="space-y-2">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-gray-100 hover:text-gray-300 text-base"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
