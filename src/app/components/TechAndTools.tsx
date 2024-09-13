@@ -122,7 +122,13 @@ export default function TechAndTools() {
                     <div className="bg-gray-800 rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[90%] mx-auto cursor-pointer">
                       <div className="bg-[#181815] flex flex-col md:flex-row h-full border border-[#3C3C3C]">
                         <div className="p-4 md:p-8 md:w-1/2">
-                          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 mt-4 md:mt-6">
+                          <h2
+                            className={`text-2xl md:text-4xl mb-4 md:mb-8 mt-4 md:mt-6 ${
+                              category.name === "Artificial Intelligence"
+                                ? "font-normal text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999]"
+                                : "font-bold"
+                            }`}
+                          >
                             {category.name}
                           </h2>
                           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
