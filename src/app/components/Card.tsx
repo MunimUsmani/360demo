@@ -81,7 +81,7 @@ export default function CardStack() {
   return (
     <div className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden">
       <div className="w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-8 text-white font-['Clash_Display'] mx-0">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-8 text-white font-['Clash_Display'] mx-0">
           Our Proven <span className="text-red-600 ">Process</span>
         </h2>
         <div className="relative h-[350px] sm:h-[200px] md:h-[500px] w-[90%]">

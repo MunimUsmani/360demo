@@ -94,14 +94,14 @@ export default function Hero() {
     <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden mx-0">
       <div ref={canvasRef} className="absolute inset-0 z-0 w-full h-full"></div>
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="font-['Clash_Display'] text-custom-size font-light leading-custom-line text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+        <h2 className="font-['Clash_Display']  font-light leading-custom-line text-center mb-4 text-3xl bg-clip-text text-[#FFFFFF]">
           Elevating your
         </h2>
 
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+        <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-normal mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Digital
         </h1>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Presence
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 font-['Clash_Display']">

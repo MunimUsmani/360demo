@@ -96,10 +96,10 @@ export default function TechAndTools() {
     <div className="bg-[#181815] text-white p-4 md:p-8 mt-32 mx-0">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-light mb-4 font-['Clash_Display']">
-            Tech and Tools <span className="text-red-500">We Use</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+            Tech and Tools <span className="text-red-600">We Use</span>
           </h1>
-          <p className="text-gray-400 mx-auto max-w-xl md:max-w-2xl font-['Clash_Display'] leading-snug md:leading-normal">
+          <p className="text-gray-200 mx-auto max-w-xl md:max-w-2xl font-['Clash_Display'] leading-snug md:leading-normal">
             Our developers use the latest technologies and frameworks to build
             powerful solutions with sleek, user-friendly designs
           </p>

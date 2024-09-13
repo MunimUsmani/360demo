@@ -24,10 +24,10 @@ const Grid = () => {
 
   return (
     <div className="container relative z-40 mx-auto mt-16">
-      <h1 className="text-center text-white text-4xl font-bold mb-2 font-['Clash_Display']">
+      <h1 className="text-center text-4xl font-semibold mb-2 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
         Mastering Advanced <span className="text-red-600">Expertise</span>
       </h1>
-      <p className="text-xl mb-16 text-center text-white font-['Clash_Display']">
+      <p className="text-xs mb-16 text-center text-white font-['Clash_Display']">
         Becoming an Expert Through Advanced Skills and Knowledge
       </p>
       <div className="flex flex-wrap justify-center mx-auto lg:w-full md:w-5/6 xl:shadow-small-blue">

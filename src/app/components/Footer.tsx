@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-16 font-['Clash_Display']">
             <div>
-              <p className="font-bold text-[15px]">800 00 975 20 34</p>
+              <p className="font-semibold text-[15px]">800 00 975 20 34</p>
               <p className="text-[13px] text-[#9B9B9B] mb-10">
                 +1 201 1800 234 3678
               </p>
@@ -34,7 +34,7 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <p className="font-bold text-[15px] font-['Clash_Display']">
+              <p className="font-semibold text-[15px] font-['Clash_Display']">
                 Dubai Silicon Oasis, DSO
               </p>
               <p className="text-[13px] text-[#9B9B9B] mb-10 font-['Clash_Display']">
