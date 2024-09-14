@@ -80,8 +80,8 @@ export default function CardStack() {
   return (
     <div className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden">
       <div className="w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-8 text-white font-['Clash_Display'] mx-0 -ml-8">
-          Our Proven <span className="text-red-600 ">Process</span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-8 text-white font-['Clash_Display'] px-2 sm:px-0">
+          Our Proven <span className="text-red-600">Process</span>
         </h2>
         <div className="relative h-[400px] sm:h-[200px] md:h-[500px] w-[90%]">
           <AnimatePresence>
@@ -99,8 +99,8 @@ export default function CardStack() {
                 }}
                 exit={{ opacity: 0, x: "120%" }}
                 transition={{
-                  duration: 0.6, // Increased duration for smoother animation
-                  ease: [0.42, 0, 0.58, 1], // Added custom easing for a more natural feel
+                  duration: 0.6,
+                  ease: [0.42, 0, 0.58, 1],
                 }}
                 onClick={
                   index === activeCards.length - 1 ? handleBringBack : undefined
