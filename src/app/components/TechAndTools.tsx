@@ -93,7 +93,7 @@ export default function TechAndTools() {
   };
 
   return (
-    <div className="bg-[#181815] text-white p-4 md:p-8 mt-32 mx-0">
+    <div className="bg-[#181815] text-white p-4 md:p-8 mt-32">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">

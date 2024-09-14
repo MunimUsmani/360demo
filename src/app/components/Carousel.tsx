@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Carousel = () => {
   return (
-    <section className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16 mx-0">
+    <section className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16">
       <div className="flex-1 max-w-lg lg:max-w-xs text-center lg:text-left font-['Clash_Display']">
         <h2 className="text-2xl md:text-3xl lg:text-5xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999]">
           Showcase{" "}

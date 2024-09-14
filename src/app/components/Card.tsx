@@ -37,10 +37,9 @@ const cards = [
   },
   {
     id: 6,
-
     title: "Requirements",
     description:
-      "Understanding your goals in detail, ensuring a solid foundation for successful software development.",
+      "At 360XpertSolutions, we begin by understanding your goals in detail, ensuring a solid foundation for successful software development through close collaboration and clear communication",
   },
 ];
 
@@ -81,10 +80,10 @@ export default function CardStack() {
   return (
     <div className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden">
       <div className="w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-8 text-white font-['Clash_Display'] mx-0">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-8 text-white font-['Clash_Display'] mx-0 -ml-8">
           Our Proven <span className="text-red-600 ">Process</span>
         </h2>
-        <div className="relative h-[350px] sm:h-[200px] md:h-[500px] w-[90%]">
+        <div className="relative h-[400px] sm:h-[200px] md:h-[500px] w-[90%]">
           <AnimatePresence>
             {activeCards.map((card, index) => (
               <motion.div

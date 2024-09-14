@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Highlight = () => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white px-6 py-12 md:px-12 lg:px-24 mx-0">
+    <section className="relative flex flex-col md:flex-row items-center justify-between bg-[#181815] text-white px-6 py-12 md:px-12 lg:px-24 mb-8">
       <div className="max-w-lg md:max-w-xl gap-10">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight text-gray-400 font-['Clash_Display']">
           <span className="">
@@ -11,10 +11,10 @@ const Highlight = () => {
             the
           </span>{" "}
         </h1>
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-300 font-['Clash_Display']">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight text-gray-300 font-['Clash_Display']">
           Future, One
         </h1>
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-300 font-['Clash_Display']">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight text-gray-300 font-['Clash_Display']">
           Solution at a Time
         </h1>
         <p className="mt-4 text-sm md:text-base lg:text-lg text-gray-400 max-w-md font-['Clash_Display']">

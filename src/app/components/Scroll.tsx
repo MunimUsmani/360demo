@@ -14,7 +14,7 @@ export default function Scroll() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden w-full h-[40px] sm:h-[45px] md:h-[50px] lg:h-[60px] bg-[#181815] mt-20 mb-20 mx-0">
+    <div className="relative overflow-hidden w-full h-[40px] sm:h-[45px] md:h-[50px] lg:h-[60px] bg-[#181815] mt-20 mb-20">
       <div
         className="absolute whitespace-nowrap flex"
         style={{

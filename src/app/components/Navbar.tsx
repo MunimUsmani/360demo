@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const links = [
     { href: "/Careers", label: "CAREERS" },
@@ -14,6 +15,18 @@ export default function Navbar() {
     { href: "/About us", label: "ABOUT US" },
     { href: "/Home", label: "HOME" },
   ];
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isSidebarOpen]);
 
   return (
     <nav className="bg-[#181815] shadow-md top-0 left-0 right-0 z-50">
@@ -33,7 +46,7 @@ export default function Navbar() {
 
           <div className="flex items-center mr-0 sm:mr-[20px]">
             <div
-              className="relative"
+              className="relative hidden sm:block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -55,7 +68,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`text-xs sm:text-sm text-gray-100 hover:text-gray-300 whitespace-nowrap transition-all duration-300 ease-in-out ${
+                      className={`text-xs sm:text-sm text-gray-100 hover:text-red-600 whitespace-nowrap transition-all duration-300 ease-in-out ${
                         isHovered
                           ? "translate-x-0 opacity-100"
                           : "translate-x-full opacity-0"
@@ -70,6 +83,51 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+            <button
+              className="sm:hidden p-2 rounded-md text-gray-400 hover:text-white"
+              onClick={() => setIsSidebarOpen(true)}
+              aria-label="Open mobile menu"
+            >
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${
+          isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsSidebarOpen(false)}
+      >
+        <div
+          className={`fixed top-0 right-0 w-64 h-full bg-[#181815] shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center p-4 border-b border-gray-700">
+            <h2 className="text-white text-xl font-semibold">Menu</h2>
+            <button
+              onClick={() => setIsSidebarOpen(false)}
+              className="text-gray-400 hover:text-white"
+              aria-label="Close mobile menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="py-4">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-700 hover:text-red-600 transition-colors duration-200"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
