@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const techCategories = [
   {
@@ -87,10 +88,30 @@ const techCategories = [
 
 export default function TechAndTools() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { ref, inView } = useInView({
+    threshold: 0.01, // Trigger when 10% of the component is visible
+    triggerOnce: true, // It will trigger every time on scroll
+  });
 
-  const handleCardClick = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % techCategories.length);
-  };
+  const resetActiveIndex = useCallback(() => {
+    setActiveIndex(0);
+  }, []);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (inView) {
+      interval = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % techCategories.length);
+      }, 5000); // Switch cards every 5 seconds while in view
+    } else {
+      resetActiveIndex();
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [inView, resetActiveIndex]);
 
   return (
     <div className="bg-[#181815] text-white p-4 md:p-8 mt-32">
@@ -105,7 +126,10 @@ export default function TechAndTools() {
           </p>
         </div>
 
-        <div className="flex justify-center items-center font-['Clash_Display'] relative h-[600px]">
+        <div
+          className="flex justify-center items-center font-['Clash_Display'] relative min-h-[600px]"
+          ref={ref}
+        >
           <AnimatePresence mode="wait">
             {techCategories.map(
               (category, index) =>
@@ -113,13 +137,17 @@ export default function TechAndTools() {
                   <motion.div
                     key={category.name}
                     className="absolute w-full"
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: "-100%", opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    onClick={handleCardClick}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                      mass: 0.5,
+                    }}
                   >
-                    <div className="bg-gray-800 rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[90%] mx-auto cursor-pointer">
+                    <div className="bg-gray-800 rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[90%] mx-auto">
                       <div className="bg-[#181815] flex flex-col md:flex-row h-full border border-[#3C3C3C]">
                         <div className="p-4 md:p-8 md:w-1/2">
                           <h2

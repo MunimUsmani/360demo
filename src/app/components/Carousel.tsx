@@ -1,10 +1,45 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Carousel = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const textVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16">
-      <div className="flex-1 max-w-lg lg:max-w-xs text-center lg:text-left font-['Clash_Display']">
+    <section
+      ref={ref}
+      className="bg-[#181815] flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 md:gap-10 p-4 md:p-6 lg:p-12 text-white ml-0 md:ml-4 lg:ml-8 mt-10 md:mt-16"
+    >
+      <motion.div
+        className="flex-1 max-w-lg lg:max-w-xs text-center lg:text-left font-['Clash_Display']"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={textVariants}
+      >
         <h2 className="text-2xl md:text-3xl lg:text-5xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999]">
           Showcase{" "}
           <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300]">
@@ -21,8 +56,13 @@ const Carousel = () => {
           that enhance customer engagement and streamline operations across
           various industries. Let our expertise drive your business forward.
         </p>
-      </div>
-      <div className="flex-1 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 ml-0 md:ml-6 lg:ml-12">
+      </motion.div>
+      <motion.div
+        className="flex-1 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 ml-0 md:ml-6 lg:ml-12"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={imageVariants}
+      >
         {["Break Time", "Invent", "Green Tech"].map((title, index) => (
           <div
             key={index}
@@ -53,7 +93,7 @@ const Carousel = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

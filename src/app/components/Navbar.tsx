@@ -107,11 +107,11 @@ export default function Navbar() {
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex justify-between items-center p-4 border-b border-gray-700">
+          <div className="flex justify-between items-center p-4 border-b border-gray-700 font-['Clash_Display']">
             <h2 className="text-white text-xl font-semibold">Menu</h2>
             <button
               onClick={() => setIsSidebarOpen(false)}
-              className="text-gray-400 hover:text-white"
+              className="text-gray-400 hover:text-white font-['Clash_Display']"
               aria-label="Close mobile menu"
             >
               <X className="h-6 w-6" />
@@ -122,7 +122,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-700 hover:text-red-600 transition-colors duration-200"
+                className="block px-4 py-2 text-sm text-gray-100 hover:bg-gray-700 hover:text-red-600 transition-colors duration-200 font-['Clash_Display']"
                 onClick={() => setIsSidebarOpen(false)}
               >
                 {link.label}
