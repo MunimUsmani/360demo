@@ -103,7 +103,7 @@ export default function TechAndTools() {
     if (inView) {
       interval = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % techCategories.length);
-      }, 5000); // Switch cards every 5 seconds while in view
+      }, 2000); // Switch cards every 5 seconds while in view
     } else {
       resetActiveIndex();
     }

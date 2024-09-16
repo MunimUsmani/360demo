@@ -24,7 +24,7 @@ const Grid = () => {
 
   return (
     <div className="container relative z-40 mx-auto mt-16">
-      <h1 className="text-center text-4xl font-semibold mb-2 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+      <h1 className="w-[80%] mx-auto text-center text-4xl font-semibold mb-2 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
         Mastering Advanced <span className="text-red-600">Expertise</span>
       </h1>
       <p className="text-xs mb-16 text-center text-white font-['Clash_Display']">
