@@ -1,7 +1,8 @@
 "use client";
+import chatSymbol from "/public/chatsymbol.png";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image"; // Importing Next.js Image component
+import Image from "next/image";
 
 export default function Scroll() {
   const [position, setPosition] = useState(0);
@@ -34,7 +35,6 @@ export default function Scroll() {
                   alt="Chat Symbol"
                   width={35}
                   height={35}
-                  className=""
                 />
               </span>
             </div>

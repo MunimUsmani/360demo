@@ -108,8 +108,6 @@ export default function Hero() {
     if (inputMessage.trim() !== "") {
       setMessages([...messages, { text: inputMessage, isUser: true }]);
       setInputMessage("");
-      // Here you would typically send the message to your AI backend
-      // and then add the AI's response to the messages
     }
   };
 
@@ -166,16 +164,13 @@ export default function Hero() {
             <Image
               src="/chatsupport.png"
               alt="Chat Support"
-              width={50}
-              height={50}
+              width={80}
+              height={80}
             />
           </div>
         </div>
-
-        {/* Chat Support Modal */}
         {isChatOpen && (
           <div className="fixed bottom-20 right-10 z-50 bg-[#222] text-white p-4 shadow-lg rounded-lg w-[320px] h-[450px] flex flex-col justify-between">
-            {/* Chat Header */}
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
