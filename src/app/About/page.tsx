@@ -4,6 +4,7 @@ import Card from "@/app/components/Card";
 import Footer from "@/app/components/Footer";
 import VisionSection from "@/app/components/visionSection";
 import TextComponent from "@/app/components/textComponent";
+import Banner from "@/app/components/Banner";
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
       <VisionSection />
       <TextComponent />
       <Card />
+      <Banner />
       <Footer />
     </div>
   );

@@ -15,28 +15,20 @@ export default function TextComponent() {
     <div className="bg-[#181815] h-screen flex items-center justify-center">
       <div className="relative">
         <div className="absolute inset-0 flex items-center justify-center"></div>
-        <div className="relative z-10 space-y-4">
-          <h1
-            className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] font-['Clash_Display']"
-            data-aos="fade-center"
-          >
-            Smart
-          </h1>
-
-          <h1
-            className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300] font-['Clash_Display']"
-            data-aos="fade-up"
-          >
-            Seamless
-          </h1>
-
-          <h1
-            className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] font-['Clash_Display']"
-            data-aos="fade-left"
-          >
-            Scalable
-          </h1>
-        </div>
+        <div className=""></div>
+        <h1 className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] font-['Clash_Display'] -mt-32">
+          Smart
+        </h1>
+      </div>
+      <div className="relative z-10 space-y-4">
+        <h1 className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300] font-['Clash_Display'] -ml-16">
+          Seamless
+        </h1>
+      </div>
+      <div>
+        <h1 className="text-7xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] font-['Clash_Display'] mt-48 -ml-16">
+          Scalable
+        </h1>
       </div>
     </div>
   );

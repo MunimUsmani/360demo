@@ -15,24 +15,23 @@ const Carousel = () => {
   return (
     <section className="bg-[#181815] text-white py-12 overflow-hidden m-6">
       <div className="max-w-7xl mx-auto px-2 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start">
-        {/* Text Section */}
         <div
           data-aos="fade-right"
           className="w-full lg:w-1/3 mb-12 lg:mb-0 lg:mr-0 lg:pl-0 lg:pr-8"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-['Clash_Display'] break-words font-medium">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-['Clash_Display'] break-words font-medium mt-12">
             Showcase{" "}
             <span className="text-red-500">
               of <br />
             </span>{" "}
             <span className="text-red-500"> Our Expertise</span>
           </h1>
-          <p className="mt-4 md:mt-5 text-gray-400 font-light text-sm md:text-base leading-6 md:leading-7 lg:leading-9 font-['Clash_Display']">
+          <p className="-mt-8 md:mt-5 text-gray-400 font-light text-sm md:text-base font-['Clash_Display']">
             Discover how 360XpertSolutions transforms businesses with
             innovative, AI-powered solutions. Explore our portfolio to see
-            successful projects that enhance customer engagement and streamline
-            operations across various industries. Let our expertise drive your
-            business forward.
+            successful projects <br /> that enhance customer engagement and
+            streamline operations across various industries. <br />
+            Let our expertise drive your business forward.
           </p>
         </div>
 
@@ -74,7 +73,6 @@ const Carousel = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
           <div
             data-aos="fade-left"
             className="relative w-full sm:w-72 md:w-80 lg:w-48 h-64 lg:h-96 bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 group hover:w-[25%] lg:group-hover:w-[25%] flex-shrink-0"
