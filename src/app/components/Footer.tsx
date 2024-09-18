@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E1E1E] text-white p-10 font-['Arial'] mx-4 md:mx-8 lg:mx-16 mb-8 rounded-lg mt-16">
+    <footer className="bg-[#1E1E1E] text-white p-10 font-['Arial'] mx-auto md:mx-8 lg:mx-16 mb-8 rounded-lg mt-16">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
           <div className="mb-8 lg:mb-0">
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-16 font-['Clash_Display']">
             <div>
-              <p className="font-semibold text-[15px]">800 00 975 20 34</p>
+              <p className="font-normal text-[15px]">800 00 975 20 34</p>
               <p className="text-[13px] text-[#9B9B9B] mb-10">
                 +1 201 1800 234 3678
               </p>
@@ -34,7 +34,7 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <p className="font-semibold text-[15px] font-['Clash_Display']">
+              <p className="font-normal text-[15px] font-['Clash_Display']">
                 Dubai Silicon Oasis, DSO
               </p>
               <p className="text-[13px] text-[#9B9B9B] mb-10 font-['Clash_Display']">

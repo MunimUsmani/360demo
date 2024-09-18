@@ -7,33 +7,33 @@ import Image from "next/image";
 const cards = [
   {
     id: 1,
-    title: "Maintenance",
+    title: "Deployment",
     description:
-      "Provide ongoing support and maintenance to keep the software up-to-date and secure.",
+      "Experience the smooth deployment of your software solutio with precision. We minimize downtime and ensure a seamless transition, delivering a fully functional and optimized product ready to positively impact your business.",
   },
   {
     id: 2,
-    title: "Design",
+    title: "Testing",
     description:
-      "Create intuitive and visually appealing designs that align with project goals and user needs.",
+      "At 360XpertSolutions, we ensure top-notch quality through rigourous testing. We thoroughly check every line of code for functionality, security, and performance with unit, integration, and acceptance tests, delivering a reliable, error-free solution.",
   },
   {
     id: 3,
-    title: "Development",
+    title: "Maintenance",
     description:
-      "Build robust and scalable solutions using cutting-edge technologies and best practices.",
+      "Our committment continues after deployment. In the Maintainance phase. we proactively monitor and update your software to keep it performing at its best. We adapt to changing needs and technological advancements, ensuring your satisfaction and support at all times.",
   },
   {
     id: 4,
-    title: "Testing",
+    title: "Development",
     description:
-      "Rigorously test all aspects of the software to ensure quality, reliability, and performance.",
+      "Our skilled developers bring your vision to life using agile methodologies. We break the projects into sprints for steady progress, maintaining high quality and transparency. You stay involved throughout ensuring the final product align with your goals.",
   },
   {
     id: 5,
-    title: "Deployment",
+    title: "System Design",
     description:
-      "Seamlessly deploy the solution to production environments, ensuring smooth transitions.",
+      "Our experts design a scable system tailored to your needs, using advanced technologies to create a blueprint that ensures current functionality and future growth.",
   },
   {
     id: 6,
@@ -78,12 +78,15 @@ export default function CardStack() {
   };
 
   return (
-    <div className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden">
+    <div
+      id="card-component"
+      className="flex w-full h-full max-w-6xl mt-24 px-4 sm:px-6 lg:px-8 mx-auto overflow-x-hidden"
+    >
       <div className="w-full">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-8 text-white font-['Clash_Display'] px-2 sm:px-0">
           Our Proven <span className="text-red-600">Process</span>
         </h2>
-        <div className="relative h-[400px] sm:h-[200px] md:h-[500px] w-[90%]">
+        <div className="relative h-[500px] sm:h-[200px] md:h-[500px] w-[90%]">
           <AnimatePresence>
             {activeCards.map((card, index) => (
               <motion.div
@@ -120,7 +123,7 @@ export default function CardStack() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg mt-8 text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display'] w-full max-w-[80%] break-words">
+                  <p className="text-sm sm:text-base md:text-lg mt-8 text-white opacity-80 pr-4 sm:pr-8 md:pr-12 leading-tight sm:leading-snug md:leading-normal font-['Clash_Display'] w-full max-w-[80%] break-words md:w-[60%]">
                     {card.description}
                   </p>
 

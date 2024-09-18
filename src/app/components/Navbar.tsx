@@ -12,7 +12,7 @@ export default function Navbar() {
   const links = [
     { href: "/Careers", label: "CAREERS" },
     { href: "/Blogs", label: "BLOGS" },
-    { href: "/About us", label: "ABOUT US" },
+    { href: "/About", label: "ABOUT US" },
     { href: "/Home", label: "HOME" },
   ];
 
@@ -94,7 +94,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${
           isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"

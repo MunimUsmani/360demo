@@ -127,7 +127,7 @@ export default function TechAndTools() {
         </div>
 
         <div
-          className="flex justify-center items-center font-['Clash_Display'] relative min-h-[600px]"
+          className="flex justify-center items-center font-['Clash_Display'] relative min-h-[600px] -mt-20"
           ref={ref}
         >
           <AnimatePresence mode="wait">
