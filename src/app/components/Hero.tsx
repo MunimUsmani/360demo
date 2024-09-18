@@ -131,10 +131,10 @@ export default function Hero() {
             Elevating your
           </h2>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-normal mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-medium mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
             Digital
           </h1>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-normal font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-medium font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
             Presence
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-gray-300 font-['Clash_Display']">

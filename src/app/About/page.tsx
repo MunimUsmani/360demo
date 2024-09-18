@@ -3,6 +3,7 @@ import HeroAbout from "@/app/components/HeroAbout";
 import Card from "@/app/components/Card";
 import Footer from "@/app/components/Footer";
 import VisionSection from "@/app/components/visionSection";
+import TextComponent from "@/app/components/textComponent";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
       <Navbar />
       <HeroAbout />
       <VisionSection />
+      <TextComponent />
       <Card />
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Wording = () => {
   return (
     <div className="max-w-3xl mx-auto text-center p-5 sm:p-6 md:p-8">
-      <h1 className="text-center text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight font-['Clash_Display'] mx-0">
+      <h1 className="text-center text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium leading-tight font-['Clash_Display'] mx-0">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D43833] to-[#650300] font-['Clash_Display']">
           Become
         </span>{" "}

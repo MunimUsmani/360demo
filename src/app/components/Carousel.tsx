@@ -20,7 +20,7 @@ const Carousel = () => {
           data-aos="fade-right"
           className="w-full lg:w-1/3 mb-12 lg:mb-0 lg:mr-0 lg:pl-0 lg:pr-8"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-['Clash_Display'] break-words">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-['Clash_Display'] break-words font-medium">
             Showcase{" "}
             <span className="text-red-500">
               of <br />

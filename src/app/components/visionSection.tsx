@@ -5,7 +5,7 @@ export default function VisionSection() {
     <section className="bg-[#181815] text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-4">
-          <h2 className="font-['Clash_Display'] text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
+          <h2 className="font-['Clash_Display'] text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight">
             Our <span className="text-red-500">Vision</span> & <br />
             Core Values
           </h2>
@@ -18,13 +18,12 @@ export default function VisionSection() {
           </p>
         </div>
 
-        {/* Right Side Box */}
-        <div className="flex items-center justify-center">
-          <div className="w-full max-w-sm p-8 bg-gradient-to-t from-[#333] to-[#222] rounded-xl border border-gray-600">
-            <h3 className="font-['Clash_Display'] text-xl font-normal text-white mb-4">
+        <div className="flex items-center justify-center w-[50%] mx-auto">
+          <div className=" items-center w-full max-w-sm p-6 bg-gradient-to-t from-[#333333] to-[#222222] rounded-lg border border-[#3C3C3C] h-[100%]">
+            <h3 className="font-['Clash_Display'] text-lg sm:text-xl font-normal text-white mb-3 text-center">
               Our Vision
             </h3>
-            <p className="font-['Clash_Display'] text-sm text-gray-400">
+            <p className="font-['Clash_Display'] text-sm text-gray-200 leading-relaxed text-center">
               Making advanced IT solutions accessible to firms at the
               avant-garde and in performance-rich businesses.
             </p>
