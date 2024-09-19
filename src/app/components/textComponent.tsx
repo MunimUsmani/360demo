@@ -44,7 +44,7 @@ export default function TextComponent() {
   }, []);
 
   return (
-    <div className="bg-[#181815] h-screen flex flex-col sm:flex-col md:flex-row items-center justify-center">
+    <div className="bg-[#181815] h-screen flex flex-col sm:flex-col md:flex-row items-center justify-center overflow-hidden">
       {/* Smart */}
       <div className="relative sm:mb-8 md:mb-0">
         <div className="absolute inset-0 flex items-center justify-center"></div>
