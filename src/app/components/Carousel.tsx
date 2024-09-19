@@ -26,7 +26,7 @@ const Carousel = () => {
             </span>{" "}
             <span className="text-red-500"> Our Expertise</span>
           </h1>
-          <p className="-mt-8 md:mt-5 text-gray-400 font-light text-sm md:text-base font-['Clash_Display']">
+          <p className="mt-4 sm:mt-6 text-gray-400 font-light text-sm md:text-base font-['Clash_Display']">
             Discover how 360XpertSolutions transforms businesses with
             innovative, AI-powered solutions. Explore our portfolio to see
             successful projects <br /> that enhance customer engagement and
