@@ -13,10 +13,10 @@ export default function HeroBlogs() {
         /> */}
       </div>
       <div className="text-center max-w-4xl mx-auto">
-        <h1 className="font-[Clash_Display] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+        <h1 className="font-['Clash_Display'] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Excellence in Software
         </h1>
-        <h1 className="font-[Clash_Display] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
+        <h1 className="font-['Clash_Display'] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Development
         </h1>
         <p

@@ -6,20 +6,20 @@ export default function JourneyBanner() {
       <div className="p-4 sm:p-8 md:p-12 relative overflow-hidden mx-auto w-full max-w-3xl md:max-w-5xl h-auto md:h-[400px]">
         <div className="bg-gradient-to-t from-[#333333] to-[#222222] rounded-lg p-4 sm:p-6 md:p-10 flex flex-col md:flex-row justify-between items-center h-full w-full">
           <div className="max-w-full md:max-w-2xl ml-0 md:ml-10 text-center md:text-left">
-            <h2 className="font-[Clash_Display] font-medium text-4xl md:text-5xl lg:text-5xl mt-2 md:mt-4">
+            <h2 className="font-['Clash_Display'] font-medium text-4xl md:text-5xl lg:text-5xl mt-2 md:mt-4">
               <span className="text-[#D43833]">Ready</span>{" "}
               <span className="bg-gradient-to-r from-white to-[#999999] text-transparent bg-clip-text">
                 To Begin
               </span>
             </h2>
-            <h2 className="font-[Clash_Display] font-medium text-4xl md:text-5xl lg:text-5xl mt-2">
+            <h2 className="font-[Clash_Display'] font-medium text-4xl md:text-5xl lg:text-5xl mt-2">
               <span className="bg-gradient-to-r from-white to-[#999999] text-transparent bg-clip-text">
                 The Journey
               </span>
             </h2>
             <a
               href="#"
-              className={`mt-6 md:mt-8 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white font-normal px-4 sm:px-6 md:px-8 rounded-full inline-block text-sm sm:text-base md:text-lg lg:text-xl font-[Clash_Display]`}
+              className="mt-6 md:mt-8 bg-gradient-to-r from-[#D43833] to-[#650300] hover:from-[#650300] hover:to-[#D43833] text-white px-4 sm:px-6 md:px-8 rounded-full inline-block text-sm sm:text-base md:text-lg lg:text-xl font-['Clash_Display']"
             >
               Start the Conversation
             </a>
