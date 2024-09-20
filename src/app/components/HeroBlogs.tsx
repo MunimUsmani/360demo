@@ -19,9 +19,7 @@ export default function HeroBlogs() {
         <h1 className="font-['Clash_Display'] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Development
         </h1>
-        <p
-          className={`text-sm sm:text-base md:text-lg mb-12 text-gray-300 font-[Clash_Display]`}
-        >
+        <p className="text-sm sm:text-base md:text-lg mb-12 text-gray-300 font-[Clash_Display]">
           Explore our finest projects that highlight 360XpertSolution's
           dedication to
           <br />

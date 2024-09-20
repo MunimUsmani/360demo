@@ -12,7 +12,7 @@ export default function JourneyBanner() {
                 To Begin
               </span>
             </h2>
-            <h2 className="font-[Clash_Display'] font-medium text-4xl md:text-5xl lg:text-5xl mt-2">
+            <h2 className="font-['Clash_Display'] font-medium text-4xl md:text-5xl lg:text-5xl mt-2">
               <span className="bg-gradient-to-r from-white to-[#999999] text-transparent bg-clip-text">
                 The Journey
               </span>
@@ -32,11 +32,9 @@ export default function JourneyBanner() {
               height={80}
               className="mb-4"
             />
-            <p
-              className={`text-[#999999] text-center md:text-right max-w-xs text-sm font-[Clash_Display]`}
-            >
+            <p className="text-[#999999] text-center md:text-right max-w-xs text-sm font-['Clash_Display']">
               Join us as we embark on a path to innovation <br /> and success.
-              Together, we'll <br /> turn your vision into reality, creating{" "}
+              Together, we'll <br /> turn your vision into reality, creating
               <br /> solutions that stand out in the digital world.
             </p>
           </div>

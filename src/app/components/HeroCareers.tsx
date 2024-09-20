@@ -18,9 +18,7 @@ export default function HeroCareers() {
         <h1 className="font-['Clash_Display'] font-medium text-5xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
           Opportunities With Us
         </h1>
-        <p
-          className={`text-sm sm:text-base md:text-lg mb-12 text-gray-300 font-[Clash_Display]`}
-        >
+        <p className="text-sm sm:text-base md:text-lg mb-12 text-gray-300 font-[Clash_Display]">
           We're always eager to connect with talented individuals.
           <br />
           Share your resume with us and we'll be in touch!
