@@ -108,6 +108,16 @@ export default function Hero() {
             won&apos;t just stand out - it will excel.
           </p>
         </div>
+        {/* <div className="absolute inset-0 z-0">
+          <Image
+            src="/wave2.png"
+            alt="Wave background"
+            layout="fill"
+            objectFit="contain"
+            objectPosition="bottom"
+            className="bg-no-repeat"
+          />
+        </div> */}
 
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 -mb-8">
           <Image

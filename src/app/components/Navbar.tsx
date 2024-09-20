@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/Careers", label: "CAREERS" },
     { href: "/Blogs", label: "BLOGS" },
     { href: "/About", label: "ABOUT US" },
-    { href: "/Home", label: "HOME" },
+    { href: "/", label: "HOME" },
   ];
 
   useEffect(() => {

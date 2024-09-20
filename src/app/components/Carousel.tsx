@@ -13,7 +13,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="bg-[#181815] text-white py-12 overflow-hidden m-6">
+    <section className="bg-[#181815] text-white py-12 overflow-hidden m-16">
       <div className="max-w-7xl mx-auto px-2 lg:px-0 flex flex-col lg:flex-row items-center lg:items-start">
         <div
           data-aos="fade-right"

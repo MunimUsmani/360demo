@@ -29,13 +29,13 @@ export default function Scroll() {
             <div key={index} className="flex items-center h-[30%]">
               <div className="flex items-center  text-[4vw] text-white sm:text-2xl md:text-3xl lg:text-4xl font-light bg-[#5C1616] font-['Clash_Display'] px-4 leading-[40px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px]">
                 <span className="gap-16">Connect And Chat</span>
-                <div className="w-[52] h-[30] gap-2">
+                <div className="w-[64px] h-[35px] gap-2">
                   <Image
                     src="/chatsymbol.png"
                     alt="Chat Symbol"
-                    width={52}
-                    height={70}
-                    className="ml-4 h-[22px]"
+                    width={42}
+                    height={64}
+                    className="ml-4 items-center"
                   />
                 </div>
               </div>

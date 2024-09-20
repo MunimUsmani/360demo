@@ -19,12 +19,13 @@ export default function Hero() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Welcome! If you need help, simply reply to this message.",
+      text: "Welcome to our site, if you need help, feel free to ask me anything.",
       isUser: false,
     },
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -117,6 +118,14 @@ export default function Hero() {
     }
   };
 
+  const handleEmojiClick = () => {
+    setShowEmojiPicker(!showEmojiPicker);
+  };
+
+  const handleFileAttachment = () => {
+    alert("File attachment functionality to be implemented.");
+  };
+
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
@@ -170,51 +179,126 @@ export default function Hero() {
           </div>
         </div>
         {isChatOpen && (
-          <div className="fixed bottom-20 right-10 z-50 bg-[#222] text-white p-4 shadow-lg rounded-lg w-[320px] h-[450px] flex flex-col justify-between">
-            <div className="flex justify-between items-center mb-2">
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                <h3 className="text-xl font-semibold">Lytica AI Agent</h3>
+          <div className="fixed bottom-4 right-4 z-50 bg-[#1E1E1E] text-white shadow-lg rounded-lg w-[320px] h-[480px] flex flex-col">
+            <div className="flex justify-between items-center p-4 border-b border-gray-700">
+              <div className="flex flex-col">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-green-600 mr-2"></div>
+                  <h3 className="text-lg font-['Clash_Display'] font-medium">
+                    Lytica AI Agent
+                  </h3>
+                </div>
+                <span className="text-xs text-gray-400 ml-4">
+                  Ready to help
+                </span>
               </div>
               <button
                 onClick={() => setIsChatOpen(false)}
-                className="text-gray-400"
+                className="text-gray-400 hover:text-white"
               >
-                <Image src="/close.png" alt="Close" width={24} height={24} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
 
-            {/* Chat Messages */}
-            <div className="flex-1 overflow-y-auto p-2 bg-[#333] rounded-md mb-2">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-gray-700">
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`mb-2 ${
-                    message.isUser ? "text-red-400 text-right" : "text-gray-200"
-                  }`}
+                  className={`${
+                    message.isUser
+                      ? "ml-auto bg-red-500"
+                      : "mr-auto bg-gray-700"
+                  } max-w-[80%] rounded-lg p-2 flex items-start`}
                 >
-                  <p>{message.text}</p>
+                  {!message.isUser && (
+                    <div className="bg-red-500 rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">
+                      <span className="text-xs font-bold">AI</span>
+                    </div>
+                  )}
+                  <p className="text-sm font-['Clash_Display']">
+                    {message.text}
+                  </p>
                 </div>
               ))}
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Chat Input */}
-            <div className="flex items-center">
-              <input
-                type="text"
-                className="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-white"
-                placeholder="Write Message"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                onKeyPress={handleKeyPress}
-              />
-              <button
-                className="ml-2 p-2 bg-red-500 text-white rounded-full"
-                onClick={handleSendMessage}
-              >
-                <Image src="/send.png" alt="Send" width={20} height={20} />
-              </button>
+            <div className="p-4 border-t border-gray-700">
+              <div className="flex items-center bg-[#2A2A2A] rounded-full relative">
+                <input
+                  type="text"
+                  className="flex-1 bg-transparent px-4 py-2 text-sm focus:outline-none font-['Clash_Display']"
+                  placeholder="Write a message"
+                  value={inputMessage}
+                  onChange={(e) => setInputMessage(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                />
+                <button
+                  className="p-2 text-gray-400 hover:text-white relative"
+                  onClick={handleEmojiClick}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  {showEmojiPicker && (
+                    <div className="absolute bottom-full right-0 mb-2 bg-white text-black p-2 rounded shadow-lg">
+                      <p>Emoji Picker (To be implemented)</p>
+                    </div>
+                  )}
+                </button>
+                <button
+                  className="p-2 text-gray-400 hover:text-white"
+                  onClick={handleFileAttachment}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <button
+                  className="p-2 bg-red-500 rounded-full text-white hover:bg-red-600"
+                  onClick={handleSendMessage}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 rotate-90"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         )}
