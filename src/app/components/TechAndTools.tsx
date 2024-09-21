@@ -92,8 +92,8 @@ const techCategories = [
 export default function TechAndTools() {
   const [activeIndex, setActiveIndex] = useState(0);
   const { ref, inView } = useInView({
-    threshold: 0.01,
-    triggerOnce: true,
+    threshold: 0.1,
+    triggerOnce: false,
   });
 
   const resetActiveIndex = useCallback(() => {
@@ -106,7 +106,7 @@ export default function TechAndTools() {
     if (inView) {
       interval = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % techCategories.length);
-      }, 2000); // Switch cards every 5 seconds while in view
+      }, 5000); // Switch cards every 5 seconds while in view
     } else {
       resetActiveIndex();
     }
@@ -116,9 +116,56 @@ export default function TechAndTools() {
     };
   }, [inView, resetActiveIndex]);
 
+  const renderTools = (category) => {
+    if (
+      category.name === "Full Stack Development" ||
+      category.name === "Cloud & DevOps"
+    ) {
+      return (
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 h-[400px]">
+          {category.tools.map((tool) => (
+            <div
+              key={tool.name}
+              className="rounded-lg p-2 md:p-4 flex items-center space-x-3 border border-[#3C3C3C] bg-[#181815]"
+            >
+              <Image
+                src={tool.logo}
+                alt={tool.name}
+                width={32}
+                height={32}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
+              <span className="text-xs md:text-sm">{tool.name}</span>
+            </div>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {category.tools.map((tool) => (
+            <div
+              key={tool.name}
+              className="rounded-lg p-2 md:p-4 flex items-center space-x-3 border border-[#3C3C3C] bg-[#181815]"
+            >
+              <Image
+                src={tool.logo}
+                alt={tool.name}
+                width={32}
+                height={32}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
+              <span className="text-xs md:text-sm">{tool.name}</span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="bg-[#181815] text-white p-4 md:p-8 mt-32">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-medium mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
             Tech and Tools <span className="text-red-600">We Use</span>
@@ -130,7 +177,7 @@ export default function TechAndTools() {
         </div>
 
         <div
-          className="flex justify-center items-center font-['Clash_Display'] relative min-h-[600px] -mt-20"
+          className="flex justify-center items-center font-['Clash_Display'] relative min-h-[600px]"
           ref={ref}
         >
           <AnimatePresence mode="wait">
@@ -150,40 +197,16 @@ export default function TechAndTools() {
                       mass: 0.5,
                     }}
                   >
-                    <div className="bg-gray-800 rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[90%] mx-auto">
-                      <div className="bg-[#181815] flex flex-col md:flex-row h-full border border-[#3C3C3C]">
+                    <div className="bg-[#1E1E1E] rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[95%] mx-auto">
+                      <div className="flex flex-col md:flex-row h-full border border-[#3C3C3C]">
                         <div className="p-4 md:p-8 md:w-1/2">
-                          <h2
-                            className={`text-2xl md:text-4xl mb-4 md:mb-8 mt-4 md:mt-6 ${
-                              category.name === "Artificial Intelligence"
-                                ? "font-normal text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999]"
-                                : "font-bold"
-                            }`}
-                          >
+                          <h2 className="text-2xl md:text-4xl mb-4 md:mb-8 mt-4 md:mt-6 font-normal text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999]">
                             {category.name}
                           </h2>
-                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                            {category.tools.map((tool) => (
-                              <div
-                                key={tool.name}
-                                className="rounded-lg p-2 md:p-4 flex items-center space-x-3 border border-[#3C3C3C]"
-                              >
-                                <Image
-                                  src={tool.logo}
-                                  alt={tool.name}
-                                  width={32}
-                                  height={32}
-                                  className="w-6 h-6 md:w-8 md:h-8"
-                                />
-                                <span className="text-xs md:text-sm">
-                                  {tool.name}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+                          {renderTools(category)}
                         </div>
                         <div className="md:w-1/2 relative flex items-center justify-center">
-                          <div className="w-full h-[150px] sm:h-[200px] md:h-[400px] relative overflow-hidden">
+                          <div className="w-full h-full relative overflow-hidden rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px]">
                             {category.video.endsWith(".mp4") ? (
                               <video
                                 className="object-cover w-full h-full"
