@@ -51,7 +51,7 @@ const techCategories = [
       { name: "Microsoft Azure", logo: "/microsoftazure.png" },
       { name: "Jenkins", logo: "/jenkins.png" },
       { name: "AWS", logo: "/aws.png" },
-      { name: "Kubernetes", logo: "/kuburnetes.png" },
+      { name: "kubernetes", logo: "/kubernetes.png" },
       { name: "Splunk", logo: "/splunk.png" },
       { name: "Firebase", logo: "/firebase.png" },
       { name: "Heroku", logo: "/heroku.png" },
