@@ -108,16 +108,15 @@ export default function Hero() {
             won&apos;t just stand out - it will excel.
           </p>
         </div>
-        {/* <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 w-full h-full bg-cover bg-center opacity-50">
           <Image
-            src="/wave2.png"
+            src="/Waveform.png"
             alt="Wave background"
-            layout="fill"
-            objectFit="contain"
-            objectPosition="bottom"
+            fill
+            style={{ objectFit: "contain", objectPosition: "bottom" }}
             className="bg-no-repeat"
           />
-        </div> */}
+        </div>
 
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 -mb-8">
           <Image

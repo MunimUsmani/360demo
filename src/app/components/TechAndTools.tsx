@@ -170,7 +170,7 @@ export default function TechAndTools() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-medium mb-4 font-['Clash_Display'] bg-clip-text text-transparent bg-gradient-to-r from-white to-[#999]">
             Tech and Tools <span className="text-red-600">We Use</span>
           </h1>
-          <p className="text-gray-200 mx-auto max-w-xl md:max-w-2xl font-['Clash_Display'] leading-snug md:leading-normal font-medium">
+          <p className="text-gray-200 mx-auto max-w-xl md:max-w-2xl font-['Clash_Display'] leading-snug md:leading-normal font-medium mb-10 sm:mb-16">
             Our developers use the latest technologies and frameworks to build
             powerful solutions with sleek, user-friendly designs
           </p>
@@ -197,7 +197,7 @@ export default function TechAndTools() {
                       mass: 0.5,
                     }}
                   >
-                    <div className="bg-[#1E1E1E] rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[95%] mx-auto">
+                    <div className="bg-[#1E1E1E] rounded-tr-[40px] sm:rounded-tr-[80px] md:rounded-tr-[150px] overflow-hidden shadow-2xl w-full max-w-[85%] mx-auto">
                       <div className="flex flex-col md:flex-row h-full border border-[#3C3C3C]">
                         <div className="p-4 md:p-8 md:w-1/2">
                           <h2 className="text-2xl md:text-4xl mb-4 md:mb-8 mt-4 md:mt-6 font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999]">

@@ -6,6 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { Send, Paperclip, Smile, X } from "lucide-react";
 
 interface Message {
   text: string;
@@ -129,11 +130,20 @@ export default function Hero() {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#181815] text-white overflow-hidden">
+        <div className="absolute inset-0 z-0 w-full h-full bg-cover bg-center opacity-50">
+          <Image
+            src="/Waveform.png"
+            alt="Wave background"
+            fill
+            style={{ objectFit: "contain", objectPosition: "bottom" }}
+            className="bg-no-repeat"
+          />
+        </div>
         <div
           ref={canvasRef}
-          className="absolute inset-0 z-0 w-full h-full"
+          className="absolute inset-0 z-10 w-full h-full"
         ></div>
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8">
           <h2 className="font-['Clash_Display'] font-light leading-custom-line text-center mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-clip-text text-[#FFFFFF]">
             Elevating your
           </h2>
@@ -153,7 +163,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 -mb-8">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 -mb-8">
           <Image
             id="toggleButton"
             src="/toggle.png"
@@ -165,7 +175,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="absolute bottom-4 right-2 z-25">
+        <div className="absolute bottom-4 right-2 z-40">
           <div
             className="rounded-full p-2 shadow-lg cursor-pointer"
             onClick={toggleChatSupport}
@@ -188,7 +198,7 @@ export default function Hero() {
                     Lytica AI Agent
                   </h3>
                 </div>
-                <span className="text-xs text-gray-400 ml-4">
+                <span className="text-xs text-gray-400 ml-4 font-['Clash_Display']">
                   Ready to help
                 </span>
               </div>
